@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const works = [
+  {
+    title: 'Homat',
+    year: '2026',
+    role: 'brand system · visual identity',
+    stack: 'figma · illustrator · instagram',
+    desc: 'Led a full rebrand of a literary and cultural publication onto a red–beige visual system, then shaped the content direction that grew engagement across its channel.',
+    href: '#',
+  },
+  {
+    title: 'Unix Network',
+    year: '2025–26',
+    role: 'product · brand · growth',
+    stack: 'telegram · figma · go',
+    desc: 'Designed the identity and go-to-market for a premium VPN built for the Iranian market — logo, marketing system, and a Telegram-first distribution strategy.',
+    href: '#',
+  },
+  {
+    title: 'Harfanieh',
+    year: '2026',
+    role: 'content system · art direction',
+    stack: 'midjourney · persian nlp',
+    desc: 'A Persian-language project adapting long-form Western essays into colloquial writing for a younger audience, paired with an original oil-painting visual language.',
+    href: '#',
+  },
+];
+---
+<Layout title="Mehdiyar — Creative Technologist">
+  <div class="wrap">
+    <header class="site-header">
+      <span class="mark">Mehdiyar</span>
+      <span class="status">available for select work</span>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Creative Technologist</p>
+      <h1>I build the systems behind the stories, and the stories behind the systems.</h1>
+      <p class="bio">
+        I move between software engineering and visual identity — distributed
+        systems and RAG pipelines on one side, brand systems and editorial
+        direction on the other. Below is a selection of what that's looked like.
+      </p>
+    </section>
+
+    <section class="index">
+      <p class="index-label">Selected work</p>
+      {works.map((w) => (
+        <a class="work" href={w.href}>
+          <div class="work-row">
+            <span class="work-title">{w.title}</span>
+            <span class="work-year">{w.year}</span>
+          </div>
+          <p class="work-meta">{w.role} · {w.stack}</p>
+          <p class="work-desc">{w.desc}</p>
+        </a>
+      ))}
+    </section>
+
+    <section class="about">
+      <p class="index-label">About</p>
+      <p>
+        Background in computer engineering, spanning Go, Python, and C++ on the
+        systems side, and art direction and writing on the other. I'm most
+        interested in projects where those two halves have to actually talk to
+        each other — where a technical constraint shapes a design decision, or
+        a visual idea has to be built, not just mocked up.
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <span>&copy; 2026 Mehdiyar</span>
+      <span class="footer-links">
+        <a href="mailto:hello@example.com">email</a>
+        <a href="https://github.com/">github</a>
+      </span>
+    </footer>
+  </div>
+</Layout>
