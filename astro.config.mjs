@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // - If this repo will live at username.github.io -> leave `base` as '/'
 // - If this repo will live at username.github.io/REPO_NAME -> set base to '/REPO_NAME/'
 export default defineConfig({
-  site: 'Mahdiyarnas.github.io', // replace with your actual GitHub Pages URL
+  site: 'https://mahdiyarnas.github.io/', // replace with your actual GitHub Pages URL
   base: '/',
   output: 'static',
 });
